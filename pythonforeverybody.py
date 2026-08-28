@@ -20,6 +20,9 @@
 #CHAPTER TWO
 #============================================================================================================================================================================================================================================================================================================================================================================================================================================================================================
 #1
+from random import random
+
+
 5
 x = 5
 x + 1
@@ -85,3 +88,62 @@ except ValueError:
 #======================================================================================================================================================================================================================
 #CHAPTER FOUR
 #=========================================================================================================================================================================================================================
+#1
+import random 
+random_number = random.randint(1, 100)
+print(f"Random number: {random_number}")
+#2 and 3 include errors so i will not write them here.
+#4 d) b and c are both correct.
+#5 d) ABC Zap ABC let's try it here:
+def fred():
+    print("Zap")
+def jane():
+    print("ABC")
+jane()
+fred()
+jane()
+#6
+def computepay(hours, rate):
+    # Check if hours exceed standard 40 hours
+    if hours > 40:
+        regular_pay = 40 * rate
+        overtime_hours = hours - 40
+        overtime_pay = overtime_hours * (rate * 1.5)
+        return regular_pay + overtime_pay
+    else:
+        return hours * rate
+
+# Get user input outside the function
+try:
+    hours_input = float(input("Enter Hours: "))
+    rate_input = float(input("Enter Rate: "))
+    
+    # Call the function with parameters
+    pay = computepay(hours_input, rate_input)
+    print(f"Pay: {pay}")
+    
+except ValueError:
+    print("Error, please enter numeric input")
+#7
+def computegrade(score):
+    if score < 0.0 or score > 1.0:
+        return "Error: Score must be between 0.0 and 1.0."
+    elif score >= 0.9:
+        return "A"
+    elif score >= 0.8:
+        return "B"
+    elif score >= 0.7:
+        return "C"
+    elif score >= 0.6:
+        return "D"
+    else:
+        return "F"
+try:
+    score_input = float(input("Enter score: "))
+    grade = computegrade(score_input)
+    print(f"Grade: {grade}")
+except ValueError:
+    print("Error: Please enter a valid number for score.")
+#=============================================================================================================================================================================================================
+#CHAPTER FIVE
+#=============================================================================================================================================================================================================
