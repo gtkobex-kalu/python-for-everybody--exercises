@@ -46,3 +46,42 @@ print(n_4, type(n_4))
 celsius = float(input("Enter temperature in Celsius: \n"))
 fahrenheit = (celsius * 9/5) + 32
 print(f"Temperature in Fahrenheit: {fahrenheit}")
+#=================================================================================================================================================================================================================================================================================
+#CHAPTER THREE
+#==========================================================================================================================================================================================================================================================================================
+#1
+h = float(input('Enter hours: \n'))
+r = float(input('Enter rate: \n'))
+p = h * r
+print(f'Hours: {h}')
+print(f'Rate: {r}')
+print(f'Pay: {p}')
+#2
+hours = input("Enter Hours: \n")
+rate = input("Enter Rate: \n")
+try:
+    pay = float(hours) * float(rate)
+    print(f"Pay: {pay}")
+except ValueError:
+    print("Please enter valid numbers for hours and rate.")
+#3
+score = input("Enter score: \n")
+try:
+    score = float(score)
+    if score < 0.0 or score > 1.0:
+        print("Error: Score must be between 0.0 and 1.0.")
+    elif score >= 0.9:
+        print("A")
+    elif score >= 0.8:
+        print("B")
+    elif score >= 0.7:
+        print("C")
+    elif score >= 0.6:
+        print("D")
+    else:
+        print("F")
+except ValueError:
+      print("Error: Please enter a valid number for score.")
+#======================================================================================================================================================================================================================
+#CHAPTER FOUR
+#=========================================================================================================================================================================================================================
