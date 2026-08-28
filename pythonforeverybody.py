@@ -147,3 +147,63 @@ except ValueError:
 #=============================================================================================================================================================================================================
 #CHAPTER FIVE
 #=============================================================================================================================================================================================================
+#1
+total = 0.0
+count = 0
+
+while True:
+    user_input = input("Enter a number: ")
+    
+    # Check for exit condition first
+    if user_input.lower() == 'done':
+        break
+        
+    try:
+        # Convert input to a float number
+        num = float(user_input)
+        total += num
+        count += 1
+    except ValueError:
+        print("Invalid input")
+        continue
+
+# Check to avoid division by zero if 'done' is typed first
+if count > 0:
+    average = total / count
+    print(f"{total} {count} {average}")
+else:
+    print("No numbers were entered.")
+#2
+total = 0.0
+count = 0
+maximum = None
+minimum = None
+
+while True:
+    user_input = input("Enter a number: ")
+    
+    if user_input.lower() == 'done':
+        break
+        
+    try:
+        num = float(user_input)
+        total += num
+        count += 1
+        
+        # Initialize or update maximum and minimum
+        if maximum is None or num > maximum:
+            maximum = num
+        if minimum is None or num < minimum:
+            minimum = num
+            
+    except ValueError:
+        print("Invalid input")
+        continue
+
+if count > 0:
+    print(f"{total} {count} {maximum} {minimum}")
+else:
+    print("No numbers were entered.")
+#===========================================================================================================================================================================================================================
+#CHAPTER SIX
+#===========================================================================================================================================================================================================================
